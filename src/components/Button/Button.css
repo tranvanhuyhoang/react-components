@@ -1,0 +1,10 @@
+.button_wrapper {}
+button {
+  color: #fff;
+  background-color: #ed2049;
+}
+button:hover {
+    background: #bebebe;
+    color: #FFFFFF;
+    outline: 0;
+}
