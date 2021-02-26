@@ -35,26 +35,52 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var Button = /*#__PURE__*/function (_React$Component) {
   _inherits(Button, _React$Component);
 
   var _super = _createSuper(Button);
 
   function Button(props) {
+    var _this;
+
     _classCallCheck(this, Button);
 
-    return _super.call(this, props);
+    _this = _super.call(this, props);
+
+    _defineProperty(_assertThisInitialized(_this), "onPress", function () {
+      console.log("vo day");
+      var button = document.querySelector('#button-custom');
+      button.addEventListener('click', function (e) {
+        var x = e.clientX - e.target.offsetLeft;
+        var y = e.clientY - e.target.offsetTop;
+        var ripples = document.createElement('span');
+        ripples.className = "ripples";
+        ripples.style.left = x + 'px';
+        ripples.style.top = y + 'px';
+        this.appendChild(ripples);
+        setTimeout(function () {
+          ripples.remove();
+        }, 700);
+      });
+    });
+
+    return _this;
   }
 
   _createClass(Button, [{
     key: "render",
     value: function render() {
-      var children = this.props.children;
+      var _this$props = this.props,
+          children = _this$props.children,
+          className = _this$props.className;
       return /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
-        className: "button_wrapper",
+        className: "button_wrapper ".concat(className),
         children: /*#__PURE__*/(0, _jsxRuntime.jsx)("button", {
-          className: "button",
-          children: children
+          id: "button-custom",
+          onClick: this.onPress,
+          children: children ? children : 'Press Me'
         })
       });
     }
