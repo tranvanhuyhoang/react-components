@@ -6,7 +6,6 @@ class Button extends React.Component {
     }
 
     onPress = () => {
-        console.log("vo day")
         const button = document.querySelector('#button-custom');
         button.addEventListener('click', function(e){
         let x = e.clientX - e.target.offsetLeft;
@@ -17,9 +16,11 @@ class Button extends React.Component {
         ripples.style.left = x + 'px';
         ripples.style.top = y + 'px';
         this.appendChild(ripples);
+
         setTimeout(() => {
+            console.log("vo day khong vay")
             ripples.remove()
-        },700);
+        },500);
         })
     }
 
