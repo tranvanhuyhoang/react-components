@@ -6,7 +6,7 @@ class Button extends React.Component {
     }
 
     onPress = () => {
-        const button = document.querySelector('#button-custom');
+        const button = document.querySelector('.tvhh-button-custom');
         button.addEventListener('click', function(e){
         let x = e.clientX - e.target.offsetLeft;
         let y = e.clientY - e.target.offsetTop;
@@ -18,7 +18,6 @@ class Button extends React.Component {
         this.appendChild(ripples);
 
         setTimeout(() => {
-            console.log("vo day khong vay")
             ripples.remove()
         },500);
         })
@@ -31,9 +30,7 @@ class Button extends React.Component {
             className,
         } = this.props
         return (
-            <div className={`button_wrapper ${className}`}>
-                <button id="button-custom" onClick={this.onPress}>{children ? children : 'Press Me'}</button>
-            </div>
+            <button id="tvhh-id-button-custom" className={`tvhh-button-custom ${className ? className : ''}`} onClick={this.onPress}>{children ? children : 'Press Me'}</button>
         );
     }
 }

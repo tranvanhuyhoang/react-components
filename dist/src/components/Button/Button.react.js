@@ -50,7 +50,6 @@ var Button = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "onPress", function () {
-      console.log("vo day");
       var button = document.querySelector('#button-custom');
       button.addEventListener('click', function (e) {
         var x = e.clientX - e.target.offsetLeft;
@@ -61,8 +60,9 @@ var Button = /*#__PURE__*/function (_React$Component) {
         ripples.style.top = y + 'px';
         this.appendChild(ripples);
         setTimeout(function () {
+          console.log("vo day khong vay");
           ripples.remove();
-        }, 700);
+        }, 500);
       });
     });
 
