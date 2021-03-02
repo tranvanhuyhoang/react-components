@@ -21,7 +21,7 @@ class Button extends React.Component {
             ripples.remove()
         },500);
         });
-        this.props.onClick();
+        this.props.onClick && this.props.onClick();
     }
 
 

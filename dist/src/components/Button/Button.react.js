@@ -63,6 +63,8 @@ var Button = /*#__PURE__*/function (_React$Component) {
           ripples.remove();
         }, 500);
       });
+
+      _this.props.onClick();
     });
 
     return _this;
