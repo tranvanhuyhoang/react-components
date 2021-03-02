@@ -20,7 +20,8 @@ class Button extends React.Component {
         setTimeout(() => {
             ripples.remove()
         },500);
-        })
+        });
+        this.props.onClick();
     }
 
 
@@ -30,7 +31,12 @@ class Button extends React.Component {
             className,
         } = this.props
         return (
-            <button id="tvhh-id-button-custom" className={`tvhh-button-custom ${className ? className : ''}`} onClick={this.onPress}>{children ? children : 'Press Me'}</button>
+            <button 
+            id="tvhh-id-button-custom" 
+            className={`tvhh-button-custom ${className ? className : ''}`} 
+            onClick={this.onPress}>
+                {children ? children : 'Press Me'}
+            </button>
         );
     }
 }

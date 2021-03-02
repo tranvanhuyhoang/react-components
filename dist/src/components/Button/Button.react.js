@@ -50,7 +50,7 @@ var Button = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "onPress", function () {
-      var button = document.querySelector('#button-custom');
+      var button = document.querySelector('.tvhh-button-custom');
       button.addEventListener('click', function (e) {
         var x = e.clientX - e.target.offsetLeft;
         var y = e.clientY - e.target.offsetTop;
@@ -60,7 +60,6 @@ var Button = /*#__PURE__*/function (_React$Component) {
         ripples.style.top = y + 'px';
         this.appendChild(ripples);
         setTimeout(function () {
-          console.log("vo day khong vay");
           ripples.remove();
         }, 500);
       });
@@ -75,13 +74,11 @@ var Button = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           children = _this$props.children,
           className = _this$props.className;
-      return /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
-        className: "button_wrapper ".concat(className),
-        children: /*#__PURE__*/(0, _jsxRuntime.jsx)("button", {
-          id: "button-custom",
-          onClick: this.onPress,
-          children: children ? children : 'Press Me'
-        })
+      return /*#__PURE__*/(0, _jsxRuntime.jsx)("button", {
+        id: "tvhh-id-button-custom",
+        className: "tvhh-button-custom ".concat(className ? className : ''),
+        onClick: this.onPress,
+        children: children ? children : 'Press Me'
       });
     }
   }]);

@@ -1,26 +1,4 @@
-.button_wrapper {}
-
-
-
-/* body{
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  min-height: 100vh;
-
-  flex-direction: column;
-
-  background: #f5f5f5;
-
-} */
-
-
-
-#button-custom{
+.tvhh-button-custom{
 
   position: relative;
 
@@ -34,7 +12,7 @@
 
   text-transform: uppercase;
 
-  font-size: 18px;
+  font-size: 14px;
 
   letter-spacing: 1px;
 
@@ -50,7 +28,7 @@
 
 
 
-#button-custom:hover {
+.tvhh-button-custom:hover {
 
     outline: 0;
 
@@ -64,7 +42,7 @@
 
 
 
-#button-custom:focus{
+.tvhh-button-custom:focus{
 
   outline: 0;
 
@@ -112,92 +90,4 @@
 
   }
 
-}
-
-
-
-
-
-
-
-
-
-
-
-/* button {
-
-  color: #fff;
-
-  background-color: #ed2049;
-
-  border: 1px solid #ed2049;
-
-  border-radius: 4px;
-
-
-
-  min-width: 64px;
-
-  height: 32px;
-
-  padding: 4px 15px;
-
-
-
-  text-transform: uppercase;
-
-  text-align: center;
-
-
-
-  font-weight: 500;
-
-  font-size: 14px;
-
-  font-family: inherit;
-
-
-
-  
-
-  line-height: 1.5715;
-
-  cursor: pointer;
-
-  white-space: nowrap;
-
-  letter-spacing: 0.02857em;
-
-
-
-  text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
-
-  box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
-
-  transition: all .3s cubic-bezier(.645,.045,.355,1);
-
-}
-
-button:hover {
-
-    outline: 0;
-
-    text-decoration: none;
-
-    background-color: rgba(237, 33, 74, 0.2);
-
-    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
-
-}
-
-button:focus{
-
-  outline: 0;
-
-}
-
-button:active{
-
-  box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
-
-} */
+}
